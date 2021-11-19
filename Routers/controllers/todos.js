@@ -16,6 +16,16 @@ const creatTask = (req, res) => {
     });
 };
 
-// edit task
+// get all tasks
+const getAllTasks = (req, res) => {
+  todoModel
+    .find()
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+};
 
-module.exports = { creatTask };
+module.exports = { creatTask, getAllTasks };
