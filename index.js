@@ -15,8 +15,8 @@ app.use("/users", userRouter)
 
 const todosRouter = require("./Routers/routes/todos")
 app.use("/todos", todosRouter)
-const PORT = process.env.PORT || 3001;
 
+const PORT = process.env.PORT || 3001;
 
 // listen is the last thing
 app.listen(PORT, () => {
